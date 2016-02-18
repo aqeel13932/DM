@@ -1,0 +1,5 @@
+Sex	M, F, and I (infant)
+Length	Longest shell measurement (mm)
+Diameter	perpendicular to length (mm)
+Height	with meat in shell (mm)
+Weight	whole abalone (grams)
