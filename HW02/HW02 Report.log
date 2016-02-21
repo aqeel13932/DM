@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.10.24)  18 FEB 2016 13:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.10.24)  20 FEB 2016 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,6 +364,25 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count107
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+))
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count108
@@ -546,39 +565,42 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
-)
-Package graphics Info: Driver file: pdftex.def on input line 94.
-)
 \Gin@req@height=\dimen137
 \Gin@req@width=\dimen138
 )
-(./HW02 Report.aux)
+
+Package geometry Warning: Over-specification in `h'-direction.
+    `width' (483.69684pt) is ignored.
+
+
+Package geometry Warning: Over-specification in `v'-direction.
+    `height' (731.23582pt) is ignored.
+
+(/home/aqeel/texmf/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen139
+\enit@toks=\toks27
+\enit@inbox=\box58
+\enitdp@description=\count131
+) (./HW02 Report.aux)
 \openout1 = `"HW02 Report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-\c@lstlisting=\count131
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+\c@lstlisting=\count132
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -588,14 +610,14 @@ LaTeX Font Info:    ... okay on input line 50.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(28.45274pt, 483.69684pt, 85.35829pt)
-* v-part:(T,H,B)=(14.22636pt, 731.23582pt, 99.58466pt)
+* h-part:(L,W,R)=(2.84526pt, 591.81735pt, 2.84526pt)
+* v-part:(T,H,B)=(14.22636pt, 816.59412pt, 14.22636pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69684pt
-* \textheight=731.23582pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* \textwidth=591.81735pt
+* \textheight=816.59412pt
+* \oddsidemargin=-69.42473pt
+* \evensidemargin=-69.42473pt
 * \topmargin=-95.04362pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -616,38 +638,18 @@ LaTeX Font Info:    ... okay on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen139
-\scratchbox=\box58
-\nofMPsegments=\count133
-\nofMParguments=\count134
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen140
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
-\everyMPtoPDFconversion=\toks28
-)
-\AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 50.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count138
-)
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
-
-(./HW02 Report.out) (./HW02 Report.out)
-\@outlinefile=\write3
-\openout3 = `"HW02 Report.out"'.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+\scratchcounter=\count133
+\scratchdimen=\dimen140
+\scratchbox=\box59
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen141
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks29
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -662,34 +664,191 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\AtBeginShipoutBox=\box60
+Package hyperref Info: Link coloring OFF on input line 55.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count139
+)
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
+
+(./HW02 Report.out) (./HW02 Report.out)
+\@outlinefile=\write3
+\openout3 = `"HW02 Report.out"'.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+Overfull \hbox (10.3556pt too wide) in paragraph at lines 75--87
+[][]
+ []
+
+
+Overfull \hbox (25.0029pt too wide) in paragraph at lines 95--108
+[]
+ []
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 128.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 128.
+
+Overfull \hbox (24.31418pt too wide) in paragraph at lines 153--172
+[] 
+ []
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
+<ggplotLength.png, id=76, 841.1425pt x 462.72874pt>
+File: ggplotLength.png Graphic file (type png)
+ <use ggplotLength.png>
+Package pdftex.def Info: ggplotLength.png used on input line 199.
+(pdftex.def)             Requested size: 252.3447pt x 138.81969pt.
+
+<ggplotweight.png, id=78, 841.1425pt x 462.72874pt>
+File: ggplotweight.png Graphic file (type png)
+ <use ggplotweight.png>
+Package pdftex.def Info: ggplotweight.png used on input line 206.
+(pdftex.def)             Requested size: 252.3447pt x 138.81969pt.
+
+<ggplotHeight.png, id=79, 841.1425pt x 462.72874pt>
+File: ggplotHeight.png Graphic file (type png)
+ <use ggplotHeight.png>
+Package pdftex.def Info: ggplotHeight.png used on input line 213.
+(pdftex.def)             Requested size: 252.3447pt x 138.81969pt.
+
+<ggplotdiameter.png, id=80, 841.1425pt x 462.72874pt>
+File: ggplotdiameter.png Graphic file (type png)
+ <use ggplotdiameter.png>
+Package pdftex.def Info: ggplotdiameter.png used on input line 220.
+(pdftex.def)             Requested size: 252.3447pt x 138.81969pt.
+
+<ggplotRings.png, id=81, 841.1425pt x 462.72874pt>
+File: ggplotRings.png Graphic file (type png)
+ <use ggplotRings.png>
+Package pdftex.def Info: ggplotRings.png used on input line 227.
+(pdftex.def)             Requested size: 252.3447pt x 138.81969pt.
+
+<ggplotGender.png, id=82, 841.1425pt x 462.72874pt>
+File: ggplotGender.png Graphic file (type png)
+ <use ggplotGender.png>
+Package pdftex.def Info: ggplotGender.png used on input line 234.
+(pdftex.def)             Requested size: 252.3447pt x 138.81969pt.
+
+[2 <./ggplotLength.png> <./ggplotweight.png> <./ggplotHeight.png> <./ggplotdiam
+eter.png> <./ggplotRings.png>] [3 <./ggplotGender.png>]
+<scatterplotall.png, id=136, 1606.0pt x 903.375pt>
+File: scatterplotall.png Graphic file (type png)
+ <use scatterplotall.png>
+Package pdftex.def Info: scatterplotall.png used on input line 260.
+(pdftex.def)             Requested size: 802.99805pt x 451.6864pt.
+
+[4
+
+ <./scatterplotall.png>]
+<scatterplotLengthRings.png, id=143, 1077.02374pt x 634.37pt>
+File: scatterplotLengthRings.png Graphic file (type png)
+
+<use scatterplotLengthRings.png>
+Package pdftex.def Info: scatterplotLengthRings.png used on input line 303.
+(pdftex.def)             Requested size: 301.56459pt x 177.62238pt.
+
+Overfull \hbox (10.65591pt too wide) in paragraph at lines 303--304
+ [] 
+ []
+
+<scatterplotDiameterLength.png, id=144, 1321.93875pt x 652.4375pt>
+File: scatterplotDiameterLength.png Graphic file (type png)
+
+<use scatterplotDiameterLength.png>
+Package pdftex.def Info: scatterplotDiameterLength.png used on input line 315.
+(pdftex.def)             Requested size: 290.82742pt x 143.53668pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 332.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 332.
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--421
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--421
+[]
+ []
+
+[5
+
+ <./scatterplotLengthRings.png> <./scatterplotDiameterLength.png>]
+<plotprediction.png, id=201, 587.19376pt x 427.5975pt>
+File: plotprediction.png Graphic file (type png)
+
+<use plotprediction.png>
+Package pdftex.def Info: plotprediction.png used on input line 457.
+(pdftex.def)             Requested size: 293.59616pt x 213.79822pt.
+
+Overfull \hbox (2.68748pt too wide) in paragraph at lines 457--458
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+
+ []
+
+[6 <./plotprediction.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 471.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 471.
  (./HW02 Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 471.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 471.
 Package rerunfilecheck Info: File `"HW02 Report".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 56.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 471.
  ) 
 Here is how much of TeX's memory you used:
- 7816 strings out of 495000
- 112197 string characters out of 6181168
- 205035 words of memory out of 5000000
- 10969 multiletter control sequences out of 15000+600000
- 8261 words of font info for 30 fonts, out of 8000000 for 9000
+ 9510 strings out of 495000
+ 133335 string characters out of 6181168
+ 390877 words of memory out of 5000000
+ 12444 multiletter control sequences out of 15000+600000
+ 9023 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,6n,32p,230b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "HW02 Report.pdf" (1 page, 41179 bytes).
+ 32i,8n,42p,293b,2185s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb>
+Output written on "HW02 Report.pdf" (6 pages, 343915 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
