@@ -10,9 +10,10 @@ plot(mydata[,2:6])
 #write plot
 dev.off()
 #Print correlation
-cor(mydata[complete.cases(mydata),][,2:6])
+cor(mydata[complete.cases(mydata),][,2:6],method = "pearson")
+?cor
 #scatterplot
-plot(mydata$Rings,mydata$Length,xlim = c(0,27),xlab = "Rings",ylab = "Length")
+plot(mydata$Rings,mydata$Length,xlim = c(0,27),xlab = "Rings",ylab = "Length",type = "")
 #scatterplot Diameter,Length
 plot(mydata$Diameter,mydata$Length,xlab="Diameter",ylab="Length")
 ########### Fourth Question #################

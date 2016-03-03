@@ -12,5 +12,7 @@ plot(mydata[,c(3,5)])
 linear.model = lm(Weight ~ Diameter,mydata)
 # Lets extract coeficiens of the linear model
 variables <- coef(linear.model)
+variables
 plot(mydata[,c(3,5)])
 abline(a = variables[1],b = variables[2],col="red",lwd=5)
+?lm
