@@ -220,7 +220,7 @@ CreateQuantiles<-function(x,groupname)
   return(result)
 }
 agelimits<-c(49.1,70.0,120.8,141.4)
-
+qqplot(datasample$height,datasample$bmi)
 maleage1 <-CreateQuantiles(datasample[datasample$ageinmonths>agelimits[1] & datasample$ageinmonths<agelimits[2]&
                                       datasample$genderdescription=="Male",],'MA1')
 ggplot(data=maleage1, aes(x=ageinmonths, y=height, group = GroupName, colour = GroupName)) +
