@@ -7,6 +7,7 @@
 \usepackage{geometry}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage{pdflscape}
 \usepackage{hyperref}
 \setlength{\belowcaptionskip}{-10pt}
 \setlength{\abovecaptionskip}{-30pt}
@@ -422,7 +423,143 @@ In figure 3 I think we have -log growth for all the measurements
 	\end{figure}
 In figure 5 I think we can see that interest is linear with f00 , kappa is logarithmic, the rest doesn't get affected at all. 
 	\section*{Fourth Question}
+	For this question I think the code is explained so maybe I'll explain main points.
+	\begin{enumerate}
+		\item \textbf{apriori}.
+		This method get all possible rules if it's used with default values.We can specify the support, confidence , lhs (left hand side : refer to X) ,rhs (right hand side: refer to Y) to get more custom rules.
+		\item \textbf{inspect} extract the rules list right hand and left hand.
+		\item \textbf{appearance or APappearance:} used to specify rhs,lhs. where each of them can be one or list of values.
+		\item \textbf{parameter or ASparameter:}used to specify minimum and maximum number in the item set , confidence , support , etc..
+	\end{enumerate}
+	The output of the code is the following figure :
+	\begin{figure}[H]
+\includegraphics[scale=0.6]{rules.png}
+\caption{Shows the rules with support and confidence}
+	\end{figure}
+	In the previous figure we can notice :
+	\begin{enumerate}
+\item circles : represent rule operation , has incoming arrows represent lhs , and outgoing arrows represent rhs. The color of the circle represent the lift. The size represent the support.
+\item Arrows : which are directed link between different components.
+\item text: which represent the rule X or Y.
+	\end{enumerate}
+So from figure 6 we can notice that\\ (Class=3rd,Sex=Male=\(>\) Survived =NO)\\ (Class=3rd,Age=Adult,Sex=Male=\(>\) Survived =NO) \\both those two rules has the highest support.but not much lift. on the other side we have :\\
+,(Class=1st,Sex=Female=\(>\) Survived =Yes)\\
+,(Class=1st,Age=Adult,Sex=Female=\(>\) Survived =Yes)\\
+have high lift but little support.
 	\section*{Fifth Question}
+For this question I modified the previous question code to increase the support to 0.1 here is the code : 
+\begin{lstlisting}[language=R]
+rules = apriori(titanic,parameter = list(minlen=2, supp=0.1, conf=0.8),appearance = list(rhs=c("Survived=No", "Survived=Yes"),default="lhs"))
+inspect(rules)
+#visualization
+library(arulesViz)
+png('rules.png',width = 800,height = 600)
+plot(rules, method="graph", control=list(type="items"))
+dev.off()
+\end{lstlisting}
+The resulted figure :
+\begin{figure}[H]
+\includegraphics[scale = 0.6]{Q5rules.png}
+\end{figure}
+The rules are : \\
+(Class=3rd,Sex=Male=\(>\) Survived =NO)\\ (Class=3rd,Age=Adult,Sex=Male=\(>\) Survived =NO) \\
+The only thing  I changed was the support to be 0.1 instead of 0.05.
 	\section*{Sixth Question}
-					
+For this question I plotted 3 measurements.Each measurement is plotted against four elements \((F_{00},F_{01},F_{11},F_{10})\) and here is the code I used to plot all these measurements:\\
+\begin{lstlisting}[language=Python]
+def doregularthings(xlab,ylab,title,ymin,ymax):
+	plt.xlim(0,10000)
+	#plt.ylim(ymin,ymax)
+	plt.ylim(-30,0)
+	plt.title(title)
+	plt.ylabel(ylab)
+	plt.xlabel(xlab)
+plt.figure(1)
+###Laplace#####
+#F11
+plt.subplot(221)
+plt.scatter([x.f11 for x in lst],[x.laplace for x in lst])
+doregularthings('F11','laplace','Laplace vs F11',0,1)
+
+#F10
+plt.subplot(222)
+plt.scatter([x.f10 for x in lst],[x.laplace for x in lst])
+doregularthings('F10','laplace','Laplace vs F10',0,1)
+
+#F01
+plt.subplot(223)
+plt.scatter([x.f01 for x in lst],[x.laplace for x in lst])
+doregularthings('F01','laplace','Laplace vs F01',0,1)
+#F00
+plt.subplot(224)
+plt.scatter([x.f00 for x in lst],[x.laplace for x in lst])
+doregularthings('F00','laplace','Laplace vs F00',0,1)
+plt.show()
+
+plt.figure(2)
+###conviction#####
+#F11
+plt.subplot(221)
+plt.scatter([x.f11 for x in lst],[x.conviction for x in lst])
+doregularthings('F11','conviction','conviction vs F11',0,20)
+
+#F10
+plt.subplot(222)
+plt.scatter([x.f10 for x in lst],[x.conviction for x in lst])
+doregularthings('F10','conviction','conviction vs F10',0,20)
+
+#F01
+plt.subplot(223)
+plt.scatter([x.f01 for x in lst],[x.conviction for x in lst])
+doregularthings('F01','conviction','conviction vs F01',0,20)
+#F00
+plt.subplot(224)
+plt.scatter([x.f00 for x in lst],[x.conviction for x in lst])
+doregularthings('F00','conviction','conviction vs F00',0,20)
+plt.show()
+
+plt.figure(3)
+###Certain Factor#####
+#F11
+plt.subplot(221)
+plt.scatter([x.f11 for x in lst],[x.certinfactor for x in lst])
+doregularthings('F11','Certain Factor','Certain Factor vs F11',0,1)
+
+#F10
+plt.subplot(222)
+plt.scatter([x.f10 for x in lst],[x.certinfactor for x in lst])
+doregularthings('F10','Certain Factor','Certain Factor vs F10',0,1)
+
+#F01
+plt.subplot(223)
+plt.scatter([x.f01 for x in lst],[x.certinfactor for x in lst])
+doregularthings('F01','Certain Factor','Certain Factor vs F01',0,1)
+#F00
+plt.subplot(224)
+plt.scatter([x.f00 for x in lst],[x.certinfactor for x in lst])
+doregularthings('F00','Certain Factor','Certain Factor vs F00',0,1)
+plt.show()
+\end{lstlisting}
+Here is the figure generated by the previous code : 
+\begin{landscape}
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{laplace.png}
+	\caption{Laplace vs confusion matrix}
+\end{figure}
+From the figures I couldn't get any relation between Lapalce and \(F_{01},F_{00}\) but I can say that \(F_{11}\) start limit for Lapalce measurement. While \(F10\) end limit.
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{conviction.png}
+	\caption{Conviction vs confusion matrix}
+\end{figure}from
+In this figure I modified \(ylim\) to get the value focused on the area with main density.In figure 8 we notice a pattern with \(F_{10}\). it looks like Hyberbola on the domain \(]0,+ \infty[\) something like \(\frac{1}{x}\)
+\begin{figure}[H]
+	\includegraphics[scale=0.5]{Certainfactor.png}
+	\caption{Certainty factor vs confusion matrix}
+\end{figure}
+\flushleft
+In figure 9 I think certainty factor is related to \(F_{10},F_{00}\) and it looks like \(\frac{-1}{x}\)\\
+\textbf{Note:}All code,tex,ipython,R,py,png files exist on \href{https://github.com/aqeel13932/DM/tree/master/HW06}{github}\\
+\centering{\textbf{ E.O.F}}
+\end{landscape}
+
 \end{document}

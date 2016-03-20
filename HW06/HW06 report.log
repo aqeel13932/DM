@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.10.24)  20 MAR 2016 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.10.24)  20 MAR 2016 22:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,6 +436,25 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+))
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -552,38 +571,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
-)
-Package graphics Info: Driver file: pdftex.def on input line 94.
-)
 \Gin@req@height=\dimen137
 \Gin@req@width=\dimen138
 )
 (./HW06 report.aux)
 \openout1 = `"HW06 report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 \c@lstlisting=\count131
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -634,25 +641,6 @@ LaTeX Font Info:    ... okay on input line 52.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 52.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count138
-)
-LaTeX Info: Redefining \ref on input line 52.
-LaTeX Info: Redefining \pageref on input line 52.
-LaTeX Info: Redefining \nameref on input line 52.
-
-(./HW06 report.out) (./HW06 report.out)
-\@outlinefile=\write3
-\openout3 = `"HW06 report.out"'.
-
-
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -668,25 +656,45 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\AtBeginShipoutBox=\box59
+Package hyperref Info: Link coloring OFF on input line 53.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count138
+)
+LaTeX Info: Redefining \ref on input line 53.
+LaTeX Info: Redefining \pageref on input line 53.
+LaTeX Info: Redefining \nameref on input line 53.
+
+(./HW06 report.out) (./HW06 report.out)
+\@outlinefile=\write3
+\openout3 = `"HW06 report.out"'.
+
+
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 89.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 91.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 91.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 92.
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--152
+Underfull \hbox (badness 10000) in paragraph at lines 124--153
 
  []
 
@@ -696,10 +704,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--152
 <board.jpg, id=82, 3079.505pt x 1437.37pt>
 File: board.jpg Graphic file (type jpg)
  <use board.jpg>
-Package pdftex.def Info: board.jpg used on input line 155.
+Package pdftex.def Info: board.jpg used on input line 156.
 (pdftex.def)             Requested size: 461.90582pt x 215.59619pt.
  [2 <./board.jpg>]
-Overfull \hbox (57.69366pt too wide) in paragraph at lines 254--311
+Overfull \hbox (57.69366pt too wide) in paragraph at lines 255--312
 \OT1/cmr/m/n/10 =========All Con-fi-dence============== f11:8802,f10:31,f01:21,
 f00:1146,f1+:8833,f0+:1167,f+1:8823,f+0:1177
  []
@@ -707,30 +715,30 @@ f00:1146,f1+:8833,f0+:1167,f+1:8823,f+0:1177
 [3] [4] <f11.png, id=207, 1445.4pt x 734.2632pt>
 File: f11.png Graphic file (type png)
  <use f11.png>
-Package pdftex.def Info: f11.png used on input line 405.
+Package pdftex.def Info: f11.png used on input line 406.
 (pdftex.def)             Requested size: 505.89758pt x 256.99596pt.
 
-Overfull \hbox (22.20074pt too wide) in paragraph at lines 405--407
+Overfull \hbox (22.20074pt too wide) in paragraph at lines 406--408
 [][]
  []
 
 [5] <f10.png, id=286, 1445.4pt x 734.2632pt>
 File: f10.png Graphic file (type png)
  <use f10.png>
-Package pdftex.def Info: f10.png used on input line 410.
+Package pdftex.def Info: f10.png used on input line 411.
 (pdftex.def)             Requested size: 505.89758pt x 256.99596pt.
 
-Overfull \hbox (22.20074pt too wide) in paragraph at lines 410--412
+Overfull \hbox (22.20074pt too wide) in paragraph at lines 411--413
 [][]
  []
 
 <f01.png, id=287, 1445.4pt x 734.2632pt>
 File: f01.png Graphic file (type png)
  <use f01.png>
-Package pdftex.def Info: f01.png used on input line 415.
+Package pdftex.def Info: f01.png used on input line 416.
 (pdftex.def)             Requested size: 505.89758pt x 256.99596pt.
 
-Overfull \hbox (22.20074pt too wide) in paragraph at lines 415--417
+Overfull \hbox (22.20074pt too wide) in paragraph at lines 416--418
 [][]
  []
 
@@ -738,44 +746,105 @@ Overfull \hbox (22.20074pt too wide) in paragraph at lines 415--417
 File: f00.png Graphic file (type png)
 
 <use f00.png>
-Package pdftex.def Info: f00.png used on input line 420.
+Package pdftex.def Info: f00.png used on input line 421.
 (pdftex.def)             Requested size: 505.89758pt x 256.99596pt.
 
-Overfull \hbox (22.20074pt too wide) in paragraph at lines 420--422
+Overfull \hbox (22.20074pt too wide) in paragraph at lines 421--423
 [][]
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 428.
-[7 <./f01.png> <./f00.png>] [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 428.
- (./HW06 report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 428.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 428.
+[7 <./f01.png> <./f00.png>] <rules.png, id=308, 803.0pt x 602.25pt>
+File: rules.png Graphic file (type png)
+
+<use rules.png>
+Package pdftex.def Info: rules.png used on input line 436.
+(pdftex.def)             Requested size: 481.80373pt x 361.35278pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
+[][]
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+) [8 <./rules.png (PNG copy)>] <Q5rules.png, id=322, 803.0pt x 602.25pt>
+File: Q5rules.png Graphic file (type png)
+ <use Q5rules.png>
+Package pdftex.def Info: Q5rules.png used on input line 462.
+(pdftex.def)             Requested size: 481.80373pt x 361.35278pt.
+
+Overfull \hbox (0.35835pt too wide) in paragraph at lines 468--469
+\OT1/cmr/m/n/10 For this ques-tion I plot-ted 3 mea-sure-ments.Each mea-sure-me
+nt is plot-ted against four el-e-ments $(\OML/cmm/m/it/10 F[]; F[]; F[]; F[]\OT
+1/cmr/m/n/10 )$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
+
+ []
+
+[9 <./Q5rules.png (PNG copy)>] [10]
+<laplace.png, id=415, 1445.4pt x 734.2632pt>
+File: laplace.png Graphic file (type png)
+ <use laplace.png>
+Package pdftex.def Info: laplace.png used on input line 546.
+(pdftex.def)             Requested size: 722.69824pt x 367.13069pt.
+
+<conviction.png, id=416, 1445.4pt x 734.2632pt>
+File: conviction.png Graphic file (type png)
+ <use conviction.png>
+Package pdftex.def Info: conviction.png used on input line 551.
+(pdftex.def)             Requested size: 722.69824pt x 367.13069pt.
+ [11
+
+ <./laplace.png>] <Certainfactor.png, id=423, 1445.4pt x 734.2632pt>
+File: Certainfactor.png Graphic file (type png)
+
+<use Certainfactor.png>
+Package pdftex.def Info: Certainfactor.png used on input line 556.
+(pdftex.def)             Requested size: 722.69824pt x 367.13069pt.
+ [12 <./conviction.png>] [13 <./Certainfactor.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 565.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 565.
+
+(./HW06 report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 565.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 565.
 Package rerunfilecheck Info: File `"HW06 report".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 428.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 565.
  ) 
 Here is how much of TeX's memory you used:
- 8681 strings out of 495000
- 122101 string characters out of 6181168
- 758182 words of memory out of 5000000
- 11555 multiletter control sequences out of 15000+600000
- 8796 words of font info for 32 fonts, out of 8000000 for 9000
+ 9589 strings out of 495000
+ 133094 string characters out of 6181168
+ 776872 words of memory out of 5000000
+ 12347 multiletter control sequences out of 15000+600000
+ 9023 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,8n,42p,241b,1891s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,8n,42p,261b,2520s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb>
-Output written on "HW06 report.pdf" (8 pages, 1029295 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "HW06 report.pdf" (13 pages, 1922930 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 368 compressed objects within 4 object streams
- 262 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 562 PDF objects out of 1000 (max. 8388607)
+ 510 compressed objects within 6 object streams
+ 359 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
