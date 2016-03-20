@@ -32,8 +32,10 @@ rules = apriori(titanic,appearance = list(rhs=c("Survived=No", "Survived=Yes"),d
 inspect(rules)
 
 #let us relax the default settings for the rules we are looking for
-rules = apriori(titanic,parameter = list(minlen=2, supp=0.05, conf=0.8),appearance = list(rhs=c("Survived=No", "Survived=Yes"),default="lhs"))
+rules = apriori(titanic,parameter = list(minlen=2, supp=0.1, conf=0.8),appearance = list(rhs=c("Survived=No", "Survived=Yes"),default="lhs"))
 inspect(rules)
 #visualization
 library(arulesViz)
+png('Q5rules.png',width = 800,height = 600)
 plot(rules, method="graph", control=list(type="items"))
+dev.off()
