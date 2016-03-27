@@ -417,7 +417,36 @@ It took about 60GB and left about 137 MB of hard disk drive.
 The previous try took about 9 hours from around 12~ to 8:49.
 Tried to play with parameters but nothing worked out at least for me.\\
 \section*{Sixth Question Another try}
-I got help from Lisa Yankovskaya about the configuration. I noticed that I used the wrong parameter for minimum support ( support count) I updated that value to be 325 (0.01 * 32560) which is the same I used for \textbf{apriori} and \textbf{eclat} function. Using 325 give me about 80 candidate where apriori gave about 90 rules.I kept modifing the minimum support till I got 90 at 284 minimum support.\\
+I got help from Lisa Yankovskaya, Faiz Ali Shah about the configuration. I noticed that I used the wrong parameter for minimum support ( support count) I updated that value to be 325 (0.01 * 32560) which is the same I used for \textbf{apriori} and \textbf{eclat} function. Using 325 give me about 80 candidate where apriori gave about 90 rules.I kept modifing the minimum support till I got 90 at 284 minimum support.\\
+After that I executed ./krimp analysdb.confg which generated analysis file and here is the header :
+\begin{lstlisting}
+** KRIMP database analysis **
+
+* General information
+
+Number of rows:			25382
+Has bin sizes:			no
+Number of items:		207515
+Average row length:		8.18
+Alphabet length:		15699
+Standard DB size:		2375775.82
+Current data type:		bit
+
+* Alphabet
+
+Value		Count				StdLength
+0=>9108		  5570 (21.9%)			5.219
+1=>5330		  4958 (19.5%)			5.387
+2=>11217		  2510 (9.9%)			6.369
+3=>14155		  2393 (9.4%)			6.438
+4=>13973		  1984 (7.8%)			6.709
+5=>7893		  1847 (7.3%)			6.812
+6=>14754		  1656 (6.5%)			6.969
+7=>3423		  1553 (6.1%)			7.062
+8=>7595		  1513 (6.0%)			7.100
+9=>2508		  1370 (5.4%)			7.243
+\end{lstlisting}
+We can notice that 9108 is the highest one in apriori \& krimp and the first rules is made of first elements in krimp.\\
 Hopefully that what is wanted from this question.\\
 Link to files :.R,.ipython,.py,.tex,.pdf can be found \href{https://github.com/aqeel13932/DM/tree/master/HW07}{here}
 \begin{center}
