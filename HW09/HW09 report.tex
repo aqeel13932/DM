@@ -79,15 +79,10 @@ The article focus on classification. And here is the list
 For this task I used the following Code : 
 \begin{lstlisting}[language=Python]
 
-# coding: utf-8
-
-# In[72]:
-
-get_ipython().magic(u'matplotlib inline')
 import matplotlib.pyplot as plt
 
 
-# In[4]:
+# In[2]:
 
 original = {}
 TotalPositive = 0
@@ -122,14 +117,15 @@ with open('roc4.txt','r') as f:
 f = f.readlines()
 for line in f:
 roc4.append(line.strip())
+rocperfect = []
+for x in original.keys():
+if original[x]:
+rocperfect = [x]+rocperfect
+else:
+rocperfect.append(x)
 
 
-# In[41]:
-
-
-
-
-# In[57]:
+# In[3]:
 
 def GetTPFP(k,dataset):
 TP=0
@@ -149,12 +145,13 @@ return (float (TP)/float(TotalPositive),float(k-TP)/float(TotalNegative))
 
 
 
-# In[58]:
+# In[4]:
 
 roc1cm=[]
 roc2cm=[]
 roc3cm=[]
 roc4cm=[]
+rocperfectcm=[]
 print 'processing roc1'
 for i in range (3000):
 roc1cm.append(GetTPFP(i,roc1))
@@ -167,10 +164,13 @@ roc3cm.append(GetTPFP(i,roc3))
 print 'processing roc4'
 for i in range (3000):
 roc4cm.append(GetTPFP(i,roc4))
+print 'processing rocperfect'
+for i in range (3000):
+rocperfectcm.append(GetTPFP(i,rocperfect))
 print 'Finished'
 
 
-# In[87]:
+# In[5]:
 
 plt.figure('roc1.jpg')
 plt.plot([x[1] for x in roc1cm],[x[0] for x in roc1cm], 'ro')
@@ -181,7 +181,7 @@ plt.title('Roc1')
 plt.savefig('roc1.jpg')
 
 
-# In[86]:
+# In[6]:
 
 plt.figure('roc2.jpg')
 plt.plot([x[1] for x in roc2cm],[x[0] for x in roc2cm], 'ro')
@@ -192,7 +192,7 @@ plt.title('Roc2')
 plt.savefig('roc2.jpg')
 
 
-# In[85]:
+# In[7]:
 
 plt.figure('roc3.jpg')
 plt.plot([x[1] for x in roc3cm],[x[0] for x in roc3cm], 'ro')
@@ -203,7 +203,7 @@ plt.title('Roc3')
 plt.savefig('roc3.jpg')
 
 
-# In[82]:
+# In[8]:
 
 plt.figure('roc4.jpg')
 plt.plot([x[1] for x in roc4cm],[x[0] for x in roc4cm], 'ro')
@@ -212,8 +212,37 @@ plt.xlabel('FPR')
 plt.title('Roc4')
 #plt.show()
 plt.savefig('roc4.jpg')
+
+
+# In[9]:
+
+plt.figure('rocperfect.jpg')
+plt.plot([x[1] for x in rocperfectcm],[x[0] for x in rocperfectcm], 'ro')
+plt.ylabel('TPR')
+plt.xlabel('FPR')
+plt.title('Rocperfect')
+#plt.show()
+plt.savefig('rocperfect.jpg')
+
+
+# In[10]:
+
+AUCROC1=0
+AUCROC2=0
+AUCROC3=0
+AUCROC4=0
+AUCROCPERFECT=0
+
+for i in range(1,3000):
+AUCROC1+= (roc1cm[i][1]-roc1cm[i-1][1])*roc1cm[i][0]
+AUCROC2+= (roc2cm[i][1]-roc2cm[i-1][1])*roc2cm[i][0]
+AUCROC3+= (roc3cm[i][1]-roc3cm[i-1][1])*roc3cm[i][0]
+AUCROC4+= (roc4cm[i][1]-roc4cm[i-1][1])*roc4cm[i][0]
+AUCROCPERFECT+= (rocperfectcm[i][1]-rocperfectcm[i-1][1])*rocperfectcm[i][0]
+
+print AUCROC1,AUCROC2,AUCROC3,AUCROC4,AUCROCPERFECT
 \end{lstlisting}
-What  I did in the previous is simply calculated TP and from it I calcualted TPR \& FPR.
+What  I did in the previous is simply calculated TP and from it I calculated TPR \& FPR.
 \[TPR = \frac{TP}{TP+FN}\]
 \[FPR = \frac{FP}{FP+TN} = 1 - specificity \]
  the confusion matrix and from it I calculated TPR,FPR then draw them.And here is the figures :\\
@@ -221,21 +250,129 @@ What  I did in the previous is simply calculated TP and from it I calcualted TPR
 	\includegraphics[scale=0.58]{roc1.jpg}
 	\includegraphics[scale=0.58]{roc2.jpg}\\
 	\includegraphics[scale=0.58]{roc3.jpg}		\includegraphics[scale=0.58]{roc4.jpg}
+	\begin{center}
+	\includegraphics[scale=0.58]{rocperfect.jpg}
+	\end{center}
+
 	\caption{ROC for all the predictions.}
 \end{figure}
-We can notice from the previous figures that Roc4 give a good prediction for TP and minimum FP compared to others.
-
+We can notice from the previous figures that Roc4 give a good prediction for TP and minimum FP compared to others.\\
+\textbf{Note:}I added a plot for the perfect file how the perfect classifier would look like.
+The following code calculate approximation of the area under curve.We calculate the sum of all rectangles (point by point) and so on.
 \begin{lstlisting}[language=R]
-AUCROC1 = sum([x[0] for x in roc1cm])
-AUCROC2 = sum([x[0] for x in roc2cm])
-AUCROC3 = sum([x[0] for x in roc3cm])
-AUCROC4 = sum([x[0] for x in roc4cm])
-print AUCROC1/3000,AUCROC2/3000,AUCROC3/3000,AUCROC4/3000
+AUCROC1=0
+AUCROC2=0
+AUCROC3=0
+AUCROC4=0
+
+for i in range(1,3000):
+AUCROC1+= (roc1cm[i][1]-roc1cm[i-1][1])*roc1cm[i][0]
+AUCROC2+= (roc2cm[i][1]-roc2cm[i-1][1])*roc2cm[i][0]
+AUCROC3+= (roc3cm[i][1]-roc3cm[i-1][1])*roc3cm[i][0]
+AUCROC4+= (roc4cm[i][1]-roc4cm[i-1][1])*roc4cm[i][0]
+print AUCROC1,AUCROC2,AUCROC3,AUCROC4
 \end{lstlisting}
 The previous code give the following result :
-\[AUC1=0.589976131687,AUC2= 0.587792866941,AUC3= 0.577493004115,AUC4= 0.617289437586\]
+\[AUC1=0.650940277346,AUC2= 0.647270924831,AUC3= 0.629960231006,AUC4= 0.696844993141\]
 \section*{Third Question}
+To charactraize the previous plots.I would explain what is happening.When we start we predict 0 or 1 positive so TP+FP =1 at best cases, while k is growing TP+FP is growing as well.At the end we predict all the data as True.In that point we have \(TPR =1 , FPR =1 \).\\
+The previous figures 
+For this task I used the hint for this question so I subtracted FPR from TPR and then tried to find the max value. I used the following code :
+\begin{lstlisting}[language=Python]
+def FindK(dataset):
+k=0
+lst=[]
+for i in range (3000):
+lst.append({'x':i,'y':dataset[i][0]-dataset[i][1]})
 
+lst.sort(key=lambda x: x['y'], reverse=True)
+return lst[0]['x']
+print FindK(roc1cm),FindK(roc2cm),FindK(roc3cm),FindK(roc4cm)
+roc1best = FindK(roc1cm)
+roc2best = FindK(roc2cm)
+roc3best = FindK(roc3cm)
+roc4best = FindK(roc4cm)
+rocperfectbest= FindK(rocperfectcm)
+print roc1best,roc2best,roc3best,roc4best,rocperfectbest
+\end{lstlisting}
+the previous code output the following data :
+\[roc1best:2179,roc2best:2089,roc3best:1500,roc4best:1996,rocperfectbest:1215\]
+To get better view I drawn the data and pointed out those points using the following code:
+\begin{lstlisting}[language=Python]
+plt.figure('roc1_best.jpg')
+plt.plot([x[1] for x in roc1cm],[x[0] for x in roc1cm], 'ro')
+plt.ylabel('TPR')
+plt.xlabel('FPR')
+plt.title('Roc1 Best Point')
+plt.axvline(x=roc1cm[roc1best][1])
+plt.axhline(y=roc1cm[roc1best][0])
+#plt.show()
+plt.savefig('roc1_best.jpg')
+
+
+# In[24]:
+
+plt.figure('roc2_best.jpg')
+plt.plot([x[1] for x in roc2cm],[x[0] for x in roc2cm], 'ro')
+plt.ylabel('TPR')
+plt.xlabel('FPR')
+plt.title('Roc2 Best Point')
+plt.axvline(x=roc2cm[roc2best][1])
+plt.axhline(y=roc2cm[roc2best][0])
+#plt.show()
+plt.savefig('roc2_best.jpg')
+
+
+# In[25]:
+
+plt.figure('roc3_best.jpg')
+plt.plot([x[1] for x in roc3cm],[x[0] for x in roc3cm], 'ro')
+plt.ylabel('TPR')
+plt.xlabel('FPR')
+plt.title('Roc3 Best Point')
+plt.axvline(x=roc3cm[roc3best][1])
+plt.axhline(y=roc3cm[roc3best][0])
+#plt.show()
+plt.savefig('roc3_best.jpg')
+
+
+# In[27]:
+
+plt.figure('roc4_best.jpg')
+plt.plot([x[1] for x in roc4cm],[x[0] for x in roc4cm], 'ro')
+plt.ylabel('TPR')
+plt.xlabel('FPR')
+plt.title('Roc4 Best Point')
+plt.axvline(x=roc4cm[roc4best][1])
+plt.axhline(y=roc4cm[roc4best][0])
+#plt.show()
+plt.savefig('roc4_best.jpg')
+
+
+# In[28]:
+
+plt.figure('rocperfect_best.jpg')
+plt.plot([x[1] for x in rocperfectcm],[x[0] for x in rocperfectcm], 'ro')
+plt.ylabel('TPR')
+plt.xlabel('FPR')
+plt.title('Rocperfect Best Point')
+plt.axvline(x=rocperfectcm[rocperfectbest][1])
+plt.axhline(y=rocperfectcm[rocperfectbest][0])
+#plt.show()
+plt.savefig('rocperfect_best.jpg')
+\end{lstlisting}
+The previous code output the following figures : 
+\begin{figure}[H]
+	\includegraphics[scale=0.58]{roc1_best.jpg}
+	\includegraphics[scale=0.58]{roc2_best.jpg}\\
+	\includegraphics[scale=0.58]{roc3_best.jpg}		\includegraphics[scale=0.58]{roc4_best.jpg}
+	\begin{center}
+		\includegraphics[scale=0.58]{rocperfect_best.jpg}
+	\end{center}
+	
+	\caption{ROC for all the predictions pointing the best split point.}
+\end{figure}
+From the previous figure we can see that at the "Rocperfect" we can't see the blue lines that's because they overlap with the data itself.
 \section*{Fourth Question}
 \section*{Fifth Question}
 \section*{Sixth Question}

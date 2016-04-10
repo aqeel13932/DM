@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.10.24)  10 APR 2016 10:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.10.24)  10 APR 2016 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,56 +710,61 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
  [2]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 141.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 137.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 141.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 137.
  [3]
 <roc1.jpg, id=165, 433.62pt x 289.08pt>
 File: roc1.jpg Graphic file (type jpg)
  <use roc1.jpg>
-Package pdftex.def Info: roc1.jpg used on input line 221.
+Package pdftex.def Info: roc1.jpg used on input line 250.
 (pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
 
 <roc2.jpg, id=166, 433.62pt x 289.08pt>
 File: roc2.jpg Graphic file (type jpg)
  <use roc2.jpg>
-Package pdftex.def Info: roc2.jpg used on input line 222.
+Package pdftex.def Info: roc2.jpg used on input line 251.
 (pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
 
 <roc3.jpg, id=167, 433.62pt x 289.08pt>
 File: roc3.jpg Graphic file (type jpg)
  <use roc3.jpg>
-Package pdftex.def Info: roc3.jpg used on input line 223.
+Package pdftex.def Info: roc3.jpg used on input line 252.
 (pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
 
 <roc4.jpg, id=168, 433.62pt x 289.08pt>
 File: roc4.jpg Graphic file (type jpg)
  <use roc4.jpg>
-Package pdftex.def Info: roc4.jpg used on input line 223.
+Package pdftex.def Info: roc4.jpg used on input line 252.
 (pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
 
-Overfull \hbox (21.52492pt too wide) in paragraph at lines 221--224
+Overfull \hbox (21.52492pt too wide) in paragraph at lines 250--253
 [][] [] 
  []
 
 
-Overfull \hbox (21.52492pt too wide) in paragraph at lines 221--224
+Overfull \hbox (21.52492pt too wide) in paragraph at lines 250--253
 [] [] 
  []
 
+<rocperfect.jpg, id=169, 433.62pt x 289.08pt>
+File: rocperfect.jpg Graphic file (type jpg)
+ <use rocperfect.jpg>
+Package pdftex.def Info: rocperfect.jpg used on input line 254.
+(pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--225
+Underfull \hbox (badness 10000) in paragraph at lines 247--258
 
  []
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[4] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -767,22 +772,64 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
-) [4 <./roc1.jpg> <./roc2.jpg> <./roc3.jpg> <./roc4.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
+) [5 <./roc1.jpg> <./roc2.jpg> <./roc3.jpg> <./roc4.jpg> <./rocperfect.jpg>] [6
+]
+<roc1_best.jpg, id=287, 433.62pt x 289.08pt>
+File: roc1_best.jpg Graphic file (type jpg)
+ <use roc1_best.jpg>
+Package pdftex.def Info: roc1_best.jpg used on input line 366.
+(pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
+
+<roc2_best.jpg, id=288, 433.62pt x 289.08pt>
+File: roc2_best.jpg Graphic file (type jpg)
+ <use roc2_best.jpg>
+Package pdftex.def Info: roc2_best.jpg used on input line 367.
+(pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
+
+<roc3_best.jpg, id=289, 433.62pt x 289.08pt>
+File: roc3_best.jpg Graphic file (type jpg)
+ <use roc3_best.jpg>
+Package pdftex.def Info: roc3_best.jpg used on input line 368.
+(pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
+
+<roc4_best.jpg, id=290, 433.62pt x 289.08pt>
+File: roc4_best.jpg Graphic file (type jpg)
+ <use roc4_best.jpg>
+Package pdftex.def Info: roc4_best.jpg used on input line 368.
+(pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
+
+Overfull \hbox (21.52492pt too wide) in paragraph at lines 366--369
+[][] [] 
+ []
+
+
+Overfull \hbox (21.52492pt too wide) in paragraph at lines 366--369
+[] [] 
+ []
+
+<rocperfect_best.jpg, id=291, 433.62pt x 289.08pt>
+File: rocperfect_best.jpg Graphic file (type jpg)
+ <use rocperfect_best.jpg>
+Package pdftex.def Info: rocperfect_best.jpg used on input line 370.
+(pdftex.def)             Requested size: 251.49977pt x 167.6665pt.
+
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 383.
+ [8 <./roc1_best.jpg> <./roc2_best.jpg> <./roc3_best.jpg> <./roc4_best.jpg> <./
+rocperfect_best.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 383.
  (./HW09 report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 383.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 383.
 Package rerunfilecheck Info: File `"HW09 report".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 383.
  ) 
 Here is how much of TeX's memory you used:
- 10308 strings out of 495000
- 147700 string characters out of 6181168
- 406049 words of memory out of 5000000
- 13270 multiletter control sequences out of 15000+600000
+ 10470 strings out of 495000
+ 150159 string characters out of 6181168
+ 411301 words of memory out of 5000000
+ 13309 multiletter control sequences out of 15000+600000
  9023 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  36i,8n,42p,781b,2015s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -799,10 +846,10 @@ msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "HW09 report.pdf" (5 pages, 237023 bytes).
+Output written on "HW09 report.pdf" (8 pages, 356205 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 156 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 273 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
