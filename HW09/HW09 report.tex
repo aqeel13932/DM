@@ -372,10 +372,216 @@ The previous code output the following figures :
 	
 	\caption{ROC for all the predictions pointing the best split point.}
 \end{figure}
-From the previous figure we can see that at the "Rocperfect" we can't see the blue lines that's because they overlap with the data itself.
+From the previous figure we can see that at the "Rocperfect" we can't see the blue lines that's because they overlap with the data itself.\\
+\textbf{Note: }second and third question code at \href{https://github.com/aqeel13932/DM/blob/master/HW09/roc_data/Q2.ipynb}{Q2.ipython} 
 \section*{Fourth Question}
+For this task I used the following code : 
+\begin{lstlisting}[language=R]
+rm(list= ls())
+setwd('/home/aqeel/Study/DM/HW09/')
+houses<- read.csv('housing.data',header = FALSE,sep = '')
+colnames(houses)<-c('CRIM','ZN','INDUS','CHAS','NOX','RM','AGE','DIS','RAD','TAX','PTRATIO','B','LSTAT','MEDV')
+module<-lm(data = houses,MEDV~.)
+summary(module)
+\end{lstlisting}
+The \(RMSE (RMSD) = 0.7406\)
 \section*{Fifth Question}
+I started with the correlation, so I used the following code : 
+\begin{lstlisting}[language=R]
+###### Fifth Question #####
+###### Fifth Question #####
+correlation <-cor(houses)
+correlation
+my_palette <- colorRampPalette(c("red", "yellow", "green"))(n = 299)
+png('correlation.png',width = 1280,height = 800)
+heatmap(correlation,main='correlation',cellnote = correlation,symm = TRUE,col=my_palette)
+dev.off()
+max(correlation)
+diag(correlation)=0
+which(correlation==max(correlation),arr.ind = TRUE)
+\end{lstlisting}
+The previous code will print the following table : \\
+\begin{lstlisting}[language=R]
+               CRIM          ZN       INDUS         CHAS         NOX          RM         AGE         DIS          RAD         TAX    PTRATIO           B      LSTAT       MEDV
+               CRIM     1.00000000 -0.20046922  0.40658341 -0.055891582  0.42097171 -0.21924670  0.35273425 -0.37967009  0.625505145  0.58276431  0.2899456 -0.38506394  0.4556215 -0.3883046
+               ZN      -0.20046922  1.00000000 -0.53382819 -0.042696719 -0.51660371  0.31199059 -0.56953734  0.66440822 -0.311947826 -0.31456332 -0.3916785  0.17552032 -0.4129946  0.3604453
+               INDUS    0.40658341 -0.53382819  1.00000000  0.062938027  0.76365145 -0.39167585  0.64477851 -0.70802699  0.595129275  0.72076018  0.3832476 -0.35697654  0.6037997 -0.4837252
+               CHAS    -0.05589158 -0.04269672  0.06293803  1.000000000  0.09120281  0.09125123  0.08651777 -0.09917578 -0.007368241 -0.03558652 -0.1215152  0.04878848 -0.0539293  0.1752602
+               NOX      0.42097171 -0.51660371  0.76365145  0.091202807  1.00000000 -0.30218819  0.73147010 -0.76923011  0.611440563  0.66802320  0.1889327 -0.38005064  0.5908789 -0.4273208
+               RM      -0.21924670  0.31199059 -0.39167585  0.091251225 -0.30218819  1.00000000 -0.24026493  0.20524621 -0.209846668 -0.29204783 -0.3555015  0.12806864 -0.6138083  0.6953599
+               AGE      0.35273425 -0.56953734  0.64477851  0.086517774  0.73147010 -0.24026493  1.00000000 -0.74788054  0.456022452  0.50645559  0.2615150 -0.27353398  0.6023385 -0.3769546
+               DIS     -0.37967009  0.66440822 -0.70802699 -0.099175780 -0.76923011  0.20524621 -0.74788054  1.00000000 -0.494587930 -0.53443158 -0.2324705  0.29151167 -0.4969958  0.2499287
+               RAD      0.62550515 -0.31194783  0.59512927 -0.007368241  0.61144056 -0.20984667  0.45602245 -0.49458793  1.000000000  0.91022819  0.4647412 -0.44441282  0.4886763 -0.3816262
+               TAX      0.58276431 -0.31456332  0.72076018 -0.035586518  0.66802320 -0.29204783  0.50645559 -0.53443158  0.910228189  1.00000000  0.4608530 -0.44180801  0.5439934 -0.4685359
+               PTRATIO  0.28994558 -0.39167855  0.38324756 -0.121515174  0.18893268 -0.35550149  0.26151501 -0.23247054  0.464741179  0.46085304  1.0000000 -0.17738330  0.3740443 -0.5077867
+               B       -0.38506394  0.17552032 -0.35697654  0.048788485 -0.38005064  0.12806864 -0.27353398  0.29151167 -0.444412816 -0.44180801 -0.1773833  1.00000000 -0.3660869  0.3334608
+               LSTAT    0.45562148 -0.41299457  0.60379972 -0.053929298  0.59087892 -0.61380827  0.60233853 -0.49699583  0.488676335  0.54399341  0.3740443 -0.36608690  1.0000000 -0.7376627
+               MEDV    -0.38830461  0.36044534 -0.48372516  0.175260177 -0.42732077  0.69535995 -0.37695457  0.24992873 -0.381626231 -0.46853593 -0.5077867  0.33346082 -0.7376627  1.0000000
+\end{lstlisting}
+To make things easier I made a heat map for the correlation
+\begin{figure}[H]
+
+\includegraphics[scale=0.49]{correlation.png}
+\caption{Show the correlation}
+\end{figure}
+\begin{landscape}
+\begin{figure}[H]
+	\includegraphics[scale=0.58]{heatmap2.png}
+	\caption{Better look at heat map}
+\end{figure}
+The maximum correlation is between \(RAD,TAX\).\\
+\textbf{Note: }even before executing the code, the paper we read previously mentioned implicitly that most correlated feature with the result would have the most effect.
+ Let's go for the code :
+ \begin{lstlisting}[language=R]
+ tt<-as.data.frame(summary(lm(data = houses,MEDV~.))$coefficients)
+ tt<-tt[order(-tt$Estimate),]
+ tt[c(1,2),]
+ \end{lstlisting} 
+ The main idea for the code is just to calculate the module, get the coefficient and order them by estimation then print the first two rows (usually Intercept take the highest after it our goal row). In the following table I'll show the requested information:\\
+ \begin{tabular}{|c|c|c|c|}
+ 	\hline
+ 	Class&Most effect&Most correlated&RMSD\\ \hline
+ 	MED&RM&RM&0.7406\\ \hline
+ 	CRIM&RAD&RAD&0.454\\ \hline
+ 	ZN&DIS&DIS&0.5749\\ \hline
+ 	INDUS&NOX&NOX&0.7495\\ \hline
+ 	CHAS&NOX&MEDV&0.08694\\ \hline
+ 	NOX&CHAS&INDUS&0.782\\ \hline
+ 	RM&MEDV&MEDV&0.5576\\ \hline
+ 	AGE&NOX&NOX&0.6775\\ \hline
+ 	DIS&CHAS&ZN&0.7725\\ \hline
+ 	RAD&NOX&TAX&0.8719\\ \hline
+ 	TAX&NOX&RAD&0.8914\\ \hline
+ 	PTRATIO&RAD&RAD&0.4982\\ \hline
+ 	B&CHAS&MEDV&0.2761\\ \hline
+ 	LSTAT&RAD&INDUS&0.7208\\ \hline
+ \end{tabular}
+\end{landscape}
+From the previous table I would say B is the easer one to predict because it has the minimum RSMD.But to be honest I don't think we can say something easy or someting hard, it's just a matter of how much the features are independent from each other , and correlated from the class we are trying tp predict.
+The code used for the previous table :
+\begin{lstlisting}[language=R]
+tt<-as.data.frame(summary(lm(data = houses,MEDV~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,CRIM~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,ZN~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,INDUS~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,CHAS~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,NOX~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,RM~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,AGE~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,DIS~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,RAD~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,TAX~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,PTRATIO~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,B~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+tt<-as.data.frame(summary(lm(data = houses,LSTAT~.))$coefficients)
+tt<-tt[order(-tt$Estimate),]
+tt[c(1,2),]
+\end{lstlisting}
 \section*{Sixth Question}
+For this task firstly I updated the function to calculated FP,FN.\\ After that I implemented function to find the index of  minimum \(FP*15+FN*20\)
+\begin{lstlisting}[language=Python]
+def GetFPFN(k,dataset):
+FP=0
+FN=0
+for i in range (3000):
+#Predicted True
+if i<k:
+#but it's false
+FP+= not original[dataset[i]]
+#predicted false
+else:
+#but it's positive
+FN+= original[dataset[i]]
+#(TP,FP,TN,FN)
+#(F11,F01,F10,F00)
+#return (TP,TotalPositive-TP,TN,TotalNegative-TN)
+#return (float (TP)/float(TotalPositive),float(k-TP)/float(TotalNegative))
+return (FP,FN)
+
+roc1cm=[]
+roc2cm=[]
+roc3cm=[]
+roc4cm=[]
+rocperfectcm=[]
+print 'processing roc1'
+for i in range (3000):
+roc1cm.append(GetFPFN(i,roc1))
+print 'processing roc2'
+for i in range (3000):
+roc2cm.append(GetFPFN(i,roc2))
+print 'processing roc3'
+for i in range (3000):
+roc3cm.append(GetFPFN(i,roc3))
+print 'processing roc4'
+for i in range (3000):
+roc4cm.append(GetFPFN(i,roc4))
+print 'processing rocperfect'
+for i in range (3000):
+rocperfectcm.append(GetFPFN(i,rocperfect))
+print 'Finished'
+def FindKminimum(dataset):
+k=0
+lst=[]
+for i in range (3000):
+lst.append({'x':i,'y':dataset[i][0]*15+20*dataset[i][1]})
+
+lst.sort(key=lambda x: x['y'], reverse=False)
+return lst[0]['x']
+\end{lstlisting}
+After that  I used the following code to find the minimum points :
+\begin{lstlisting}[language=Python]
+roc1best = FindKminimum(roc1cm)
+roc2best = FindKminimum(roc2cm)
+roc3best = FindKminimum(roc3cm)
+roc4best = FindKminimum(roc4cm)
+rocperfectbest= FindKminimum(rocperfectcm)
+print 'Best Points roc1:{}, roc2:{}, roc3:{}, roc4:{}, rocperfect:{}'.format(roc1cm[roc1best],roc2cm[roc2best],roc3cm[roc3best],roc4cm[roc4best], rocperfectcm[rocperfectbest])
+\end{lstlisting}
+Which give : 
+Best Points roc1:(1058, 94), roc2:(1045, 171), roc3:(661, 376), roc4:(842, 61), rocperfect:(0, 0)\\
+The following code is to find which one provide the least cost:
+\begin{lstlisting}[language=Python]
+def PrintTotalCost(row):
+return row[0]*15+row[1]*20
+
+print 'Best Points roc1:{}, roc2:{}, roc3:{}, roc4:{}, rocperfect:{}'.format(PrintTotalCost(roc1cm[roc1best]),
+PrintTotalCost(roc2cm[roc2best]),
+PrintTotalCost(roc3cm[roc3best]),
+PrintTotalCost(roc4cm[roc4best]),
+PrintTotalCost(rocperfectcm[rocperfectbest]))
+\end{lstlisting}
+The previous code print :
+The cost :\( roc1:17750, roc2:19095, roc3:17435, roc4:13850, rocperfect:0\) \\ No wonder rocperfect perform the best it's the actual data reordered.But between the four models roc4 give the least cost.\\
+\textbf{Note:} All Code , Tex,.ipython,.pdf,.R exist on \href{https://github.com/aqeel13932/DM/tree/master/HW09}{github}
+\begin{center}
+\textbf{E.O.F}
+\end{center}
 \begin{thebibliography}{9}
 	\bibitem{1}
 	\href{https://en.wikipedia.org/wiki/Receiver_operating_characteristic}{receiver operating Characteristics }
