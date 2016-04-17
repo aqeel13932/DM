@@ -66,7 +66,7 @@ numbers<-seq(1,4,1)
 png('train_test.png')
 ggplot(data.frame(cbind(numbers,trainRMSE)),aes(numbers, trainRMSE))+geom_line(col="red") +
   geom_line(aes(numbers,testRMSE),data =data.frame(cbind(numbers,testRMSE)),col="blue" )+ xlab("Module")+
-  ylab("RSME")
+  ylab("RSME")+?geom_point()
 dev.off()
 head(cbind(diamonds[,1:6],diamonds[8:10]))
 ################ Seventh Question ############
@@ -74,27 +74,38 @@ library(MASS)
 module4ridge<- lm.ridge(price~.+poly(carat,3)+poly(depth,3)+poly(x,2)+poly(y,2)+poly(z,2)-carat-depth-x-y-z,data = trainset)
 module4ridge.trn.prd = as.matrix(model.matrix(price~.+poly(carat,3)+poly(depth,3)+poly(x,2)+poly(y,2)+poly(z,2)-carat-depth-x-y-z,trainset))%*% coef(module4ridge)
 module4ridge.tst.prd = as.matrix(model.matrix(price~.+poly(carat,3)+poly(depth,3)+poly(x,2)+poly(y,2)+poly(z,2)-carat-depth-x-y-z,testset))%*% coef(module4ridge)
-sqrt(sum((module4ridge.trn.prd- trainset$price)^2)/length(trainset$price))
-sqrt(sum((module4ridge.trn.prd- testset$price)^2)/length(testset$price))
+
 
 #install.packages("lars")
 library(lars)
-x = model.matrix(price~.,training.data)
-y <- training.data$price
-model6_training <- lars(x, y, type="lasso",trace = TRUE, max.steps=20)
-summary(model6_training)
-best_step_train <- model6$df[which.min(model6_training$RSS)]
-ypred6_train <- predict(model6_training, x, s=best_step_train, type="fit")$fit
-mse.model6.train <- sqrt(mean((y - ypred6_train)^2))
+module4lasso <- lars(
+  model.matrix(price~.+poly(carat,3)+poly(depth,3)+poly(x,2)+poly(y,2)+poly(z,2)-carat-depth-x-y-z,trainset),
+  trainset$price, type="lasso",trace = TRUE, max.steps=20)
+module4lasso.trn.prd <- predict(module4lasso,
+                        model.matrix(price~.+poly(carat,3)+poly(depth,3)+poly(x,2)+poly(y,2)+poly(z,2)-carat-depth-x-y-z,trainset),
+                        s=module4lasso$df[which.min(module4lasso$RSS)], type="fit")$fit
 
 
-module4lasso<- 
-scale(testset,center = F, scale = module4ridge$scales)
-?lm.ridge
-module4ridge.tst.prd = scale(cbind(testset[,1:6],testset[8:10]),center = F, scale = module4ridge$scales)%*% module4ridge$coef[,which.min(module4ridge$GCV)] + module4ridge$ym
-module4ridge.trn.prd = scale(trainset,center = F, scale = module4ridge$scales)%*% module4ridge$coef[,which.min(module4ridge$GCV)] + module4ridge$ym
-module4predtrnridge<-predict(module4ridge, trainset)
-module4predtstridge<-predict(module4ridge, testset)
-module4lasso<- glmne
-?glmnet
-mod4trnpred<-?glmnet(cbind(trainset[,1:6],trainset[8:10]),trainset[,7])
+module4lasso.tst.prd <- predict(module4lasso,
+                                model.matrix(price~.+poly(carat,3)+poly(depth,3)+poly(x,2)+poly(y,2)+poly(z,2)-carat-depth-x-y-z,testset),
+                                s=module4lasso$df[which.min(module4lasso$RSS)], type="fit")$fit
+
+trainRMSE<-c(sqrt(sum((module1predtrn-trainset$price)^2)/length(trainset$price)),
+             sqrt(sum((module2predtrn-trainset$price)^2)/length(trainset$price)),
+             sqrt(sum((module3predtrn-trainset$price)^2)/length(trainset$price)),
+             sqrt(sum((module4predtrn-trainset$price)^2)/length(trainset$price)),
+             sqrt(sum(( module4lasso.trn.prd- trainset$price)^2)/length(trainset$price)),
+             sqrt(sum((module4ridge.trn.prd- trainset$price)^2)/length(trainset$price)))
+
+testRMSE<-c(sqrt(sum((module1predtst-testset$price)^2)/length(testset$price)),
+            sqrt(sum((module2predtst-testset$price)^2)/length(testset$price)),
+            sqrt(sum((module3predtst-testset$price)^2)/length(testset$price)),
+            sqrt(sum((module4predtst-testset$price)^2)/length(testset$price)),
+            sqrt(sum(( module4lasso.tst.prd- testset$price)^2)/length(testset$price)),
+            sqrt(sum((module4ridge.tst.prd- testset$price)^2)/length(testset$price)))
+numbers<-seq(1,6,1)
+png('all_modules.png')
+ggplot(data.frame(cbind(numbers,trainRMSE)),aes(numbers, trainRMSE))+geom_line(col="red") +
+  geom_line(aes(numbers,testRMSE),data =data.frame(cbind(numbers,testRMSE)),col="blue" )+ xlab("Module")+
+  ylab("RSME")
+dev.off()
