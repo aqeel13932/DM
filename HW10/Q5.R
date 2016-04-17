@@ -1,0 +1,12 @@
+rm(list=ls())
+setwd('/home/aqeel/Study/DM/HW10/')
+train <- read.csv('train.csv',header = TRUE)
+module<-lm(data = train,target~.)
+summary(train)
+test<-read.csv('test.csv',header = TRUE)
+head(test[,c(1,2)])
+result<-predict(module,test)
+output<-cbind(result)
+colnames(output)<-c('ID','target')
+
+write.csv(output,file='submit 001')
