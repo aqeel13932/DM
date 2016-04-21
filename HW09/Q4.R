@@ -21,6 +21,7 @@ tt<-as.data.frame(summary(lm(data = houses,MEDV~.))$coefficients)
 tt<-tt[order(-tt$Estimate),]
 tt[c(1,2),]
 tt<-as.data.frame(summary(lm(data = houses,CRIM~.))$coefficients)
+tt
 tt<-tt[order(-tt$Estimate),]
 tt[c(1,2),]
 tt<-as.data.frame(summary(lm(data = houses,ZN~.))$coefficients)
