@@ -338,7 +338,74 @@ In the previous figures we can see that after the 5th iteration the centers got 
 \section*{Fourth Question}
 The Slide already added.
 \section*{Fifth Question}
-\href{https://www.kaggle.com/dsoreo/home-depot-product-search-relevance/testing-r/comments }{Analysis}\\
+\href{https://www.kaggle.com/dsoreo/home-depot-product-search-relevance/testing-r/notebook}{Analysis}\\
+To Find something different than the previous information I stemmed the text using the following code :
+\begin{lstlisting}[language=Python]
+
+# coding: utf-8
+
+# In[1]:
+
+import time
+start_time = time.time()
+
+import numpy as np
+import pandas as pd
+from nltk.stem.porter import *
+stemmer = PorterStemmer()
+#from nltk.stem.snowball import SnowballStemmer #0.003 improvement but takes twice as long as PorterStemmer
+import re
+import random
+random.seed(1301)
+
+
+# In[2]:
+
+df_train = pd.read_csv('Data Warehouse/train.csv', encoding="ISO-8859-1")
+df_test = pd.read_csv('Data Warehouse/test.csv', encoding="ISO-8859-1")
+df_pro_desc = pd.read_csv('Data Warehouse/product_descriptions.csv')
+df_attr = pd.read_csv('Data Warehouse/attributes.csv', encoding="ISO-8859-1")
+df_brand = df_attr[df_attr.name == "MFG Brand Name"][["product_uid", "value"]].rename(columns={"value": "brand"})
+num_train = df_train.shape[0]
+df_all = pd.concat((df_train, df_test), axis=0, ignore_index=True)
+df_all = pd.merge(df_all, df_pro_desc, how='left', on='product_uid')
+df_all = pd.merge(df_all, df_brand, how='left', on='product_uid')
+
+
+# In[3]:
+
+def stem_sentence(sentence):
+    sentence = [stemmer.stem_word(x) for x in sentence.split()]
+    return sentence
+
+
+# In[4]:
+
+df_all['search_term'] = df_all['search_term'].map(lambda x:stem_sentence(x))
+df_all['product_title'] = df_all['product_title'].map(lambda x:stem_sentence(x))
+df_all['product_description'] = df_all['product_description'].map(lambda x:stem_sentence(x))
+
+
+# In[9]:
+
+words={}
+def AddToWords(sentence):
+    for i in sentence:
+        words[i]=True
+
+
+# In[10]:
+
+df_all['search_term'] = df_all['search_term'].map(lambda x:AddToWords(x))
+df_all['product_title'] = df_all['product_title'].map(lambda x:AddToWords(x))
+df_all['product_description'] = df_all['product_description'].map(lambda x:AddToWords(x))
+
+
+# In[11]:
+
+len(words.keys())
+\end{lstlisting} 
+The Total number of distinct words is : 
 \textbf{Note:}All code,pythhon ,tex,pdf,etc... files exist in \href{https://github.com/aqeel13932/DM/tree/master/HW11}{github}
 \begin{center}
 \textbf{E.O.F}

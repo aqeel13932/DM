@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.23)  24 APR 2016 04:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.23)  25 APR 2016 00:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,22 +917,22 @@ Overfull \vbox (45.99135pt too high) has occurred while \output is active []
 
 
 [10 <./1.png> <./2.png> <./3.png> <./4.png> <./5.png> <./6.png> <./7.png> <./8.
-png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 346.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 346.
+png>] [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 413.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 413.
  (./HW11 report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 346.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 346.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 413.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 413.
 Package rerunfilecheck Info: File `"HW11 report".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 346.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 413.
  ) 
 Here is how much of TeX's memory you used:
- 10089 strings out of 494953
- 145320 string characters out of 6180977
+ 10221 strings out of 494953
+ 147058 string characters out of 6180977
  417099 words of memory out of 5000000
- 13057 multiletter control sequences out of 15000+600000
+ 13124 multiletter control sequences out of 15000+600000
  9369 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  36i,11n,42p,308b,1898s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -947,10 +947,10 @@ blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 10.pfb>
-Output written on "HW11 report.pdf" (11 pages, 3418953 bytes).
+Output written on "HW11 report.pdf" (12 pages, 3427376 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 195 named destinations out of 1000 (max. 500000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 260 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
