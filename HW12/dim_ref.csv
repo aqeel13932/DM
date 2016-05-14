@@ -1,0 +1,67 @@
+RELATE;Relationship;01;Householder
+RELATE;Relationship;02;Husband/wife
+RELATE;Relationship;03;Natural born son/daughter
+RELATE;Relationship;04;Adopted son/daughter
+RELATE;Relationship;05;Stepson/Stepdaughter
+RELATE;Relationship;06;Brother/sister
+RELATE;Relationship;07;Father/mother
+RELATE;Relationship;08;Grandchild
+RELATE;Relationship;09;Parent-in-law
+RELATE;Relationship;10;Son-in-law/daughter-in-law
+RELATE;Relationship;11;Other relative
+RELATE;Relationship;12;Brother-in-law/sister-in-law
+RELATE;Relationship;13;Nephew/niece
+RELATE;Relationship;14;Grandparent
+RELATE;Relationship;15;Uncle/aunt
+RELATE;Relationship;16;Cousin
+RELATE;Relationship;17;Roomer/boarder
+RELATE;Relationship;18;Housemate/roommate
+RELATE;Relationship;19;Unmarried partner
+RELATE;Relationship;20;Foster child
+RELATE;Relationship;21;Other nonrelative
+RELATE;Relationship;22;Institutionalized GQ person
+RELATE;Relationship;23;Noninstitutionalized GQ person
+SEX;Sex;1;Male
+SEX;Sex;2;Female
+RACE1;Race Recode 1;1;White alone
+RACE1;Race Recode 1;2;Black or African American alone
+RACE1;Race Recode 1;3;American Indian alone
+RACE1;Race Recode 1;4;Alaska Native alone
+RACE1;Race Recode 1;5;American Indian and Alaska Native tribes specified, and American Indian or Alaska Native, not specified, and no other races
+RACE1;Race Recode 1;6;Asian alone
+RACE1;Race Recode 1;7;Native Hawaiian and Other Pacific Islander alone
+RACE1;Race Recode 1;8;Some other race alone
+RACE1;Race Recode 1;9;Two or more major race groups
+MARSTAT;Marital Status;2;Widowed
+MARSTAT;Marital Status;3;Divorced
+MARSTAT;Marital Status;4;Separated
+MARSTAT;Marital Status;5;Never married (includes under 15 years)
+EDUC;Educational Attainment;00;Not in universe (Under 3 years)
+EDUC;Educational Attainment;01;No schooling completed
+EDUC;Educational Attainment;02;Nursery school to 4th grade
+EDUC;Educational Attainment;03;5th grade or 6th grade
+EDUC;Educational Attainment;04;7th grade or 8th grade
+EDUC;Educational Attainment;05;9th grade
+EDUC;Educational Attainment;06;10th grade
+EDUC;Educational Attainment;07;11th grade
+EDUC;Educational Attainment;08;12th grade, no diploma
+EDUC;Educational Attainment;09;High school graduate
+EDUC;Educational Attainment;10;Some college, but less than 1 year
+EDUC;Educational Attainment;11;One or more years of college, no degree
+EDUC;Educational Attainment;12;Associate degree
+EDUC;Educational Attainment;13;Bachelor's degree
+EDUC;Educational Attainment;14;Master's degree
+EDUC;Educational Attainment;15;Professional degree
+EDUC;Educational Attainment;16;Doctorate degree
+ENGABIL;English Ability ;blank;Not in universe (Under 5 years or SPEAK = 2)
+ENGABIL;English Ability ;1;Very well
+ENGABIL;English Ability ;2;Well
+ENGABIL;English Ability ;3;Not well
+ENGABIL;English Ability ;4;Not at all
+ESR;Employment Status Recode;0;Not in universe (Under 16 years)
+ESR;Employment Status Recode;1;Employed, at work
+ESR;Employment Status Recode;2;Employed, with a job but not at work
+ESR;Employment Status Recode;3;Unemployed
+ESR;Employment Status Recode;4;Armed Forces, at work
+ESR;Employment Status Recode;5;Armed Forces, with a job but not at work
+ESR;Employment Status Recode;6;Not in labor force
