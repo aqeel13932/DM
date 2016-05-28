@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.23)  14 MAY 2016 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.23)  14 MAY 2016 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1020,17 +1020,26 @@ Package pdftex.def Info: TSP_OUTPUT2.png used on input line 486.
  [12 <./TSP_OUTPUT_Perfect.png (PNG copy)> <./TSP_OUTPUT2.png (PNG copy)>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 565.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 565.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 515--554
 
-(./HW12 report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 565.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 565.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--554
+
+ []
+
+[13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 566.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 566.
+ (./HW12 report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 566.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 566.
 Package rerunfilecheck Info: File `"HW12 report".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 565.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 566.
  ) 
 Here is how much of TeX's memory you used:
  10739 strings out of 494953
@@ -1051,7 +1060,7 @@ lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on "HW12 report.pdf" (14 pages, 14176918 bytes).
+Output written on "HW12 report.pdf" (14 pages, 14176931 bytes).
 PDF statistics:
  520 PDF objects out of 1000 (max. 8388607)
  465 compressed objects within 5 object streams
